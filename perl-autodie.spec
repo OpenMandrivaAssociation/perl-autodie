@@ -1,6 +1,5 @@
-
 %define realname   autodie
-%define version    1.998
+%define version    1.999
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
@@ -11,13 +10,12 @@ Group:      Development/Perl
 Summary:    Lexically have functions succeed or die
 Source:     http://www.cpan.org/modules/by-module//%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Test::More)
 Provides:      perl(autodie)
-
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 'Fatal' provides a way to conveniently replace functions which normally
