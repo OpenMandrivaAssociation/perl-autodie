@@ -1,21 +1,19 @@
-%define realname   autodie
-%define version    1.999
-%define release    %mkrel 1
+%define upstream_name       autodie
+%define upstream_version    2.06
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Lexically have functions succeed or die
-Source:     http://www.cpan.org/modules/by-module//%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRequires: perl-devel
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source:     http://www.cpan.org/modules/by-module/autodie/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Test::More)
 Provides:      perl(autodie)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 'Fatal' provides a way to conveniently replace functions which normally
@@ -36,7 +34,7 @@ later in that import list raise an exception only when these are called in
 void context--that is, when their return values are ignored. For example
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
