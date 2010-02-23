@@ -1,5 +1,5 @@
 %define upstream_name       autodie
-%define upstream_version 2.08
+%define upstream_version 2.09
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
