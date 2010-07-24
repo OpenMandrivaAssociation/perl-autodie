@@ -3,17 +3,21 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
-License:    GPL or Artistic
-Group:      Development/Perl
+Release:    %mkrel 2
+
 Summary:    Lexically have functions succeed or die
+License:    GPL+ or Artistic
+Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source:     http://www.cpan.org/modules/by-module/autodie/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/autodie/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Test::More)
-Provides:      perl(autodie)
+
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
+
+Provides:      perl(autodie)
 
 %description
 'Fatal' provides a way to conveniently replace functions which normally
@@ -41,7 +45,7 @@ void context--that is, when their return values are ignored. For example
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
@@ -55,5 +59,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
