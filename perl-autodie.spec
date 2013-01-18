@@ -1,9 +1,9 @@
 %define upstream_name       autodie
-%define upstream_version 2.10
+%define upstream_version 2.13
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	8
+Release:	1
 
 Summary:	Lexically have functions succeed or die
 License:	GPL+ or Artistic
