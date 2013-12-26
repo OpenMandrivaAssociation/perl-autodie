@@ -1,14 +1,14 @@
 %define upstream_name       autodie
-%define upstream_version 2.13
+%define upstream_version 2.20
 
 Summary:	Lexically have functions succeed or die
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/autodie/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/autodie/autodie-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Test::More)
@@ -50,4 +50,5 @@ void context--that is, when their return values are ignored. For example
 %doc Changes README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
