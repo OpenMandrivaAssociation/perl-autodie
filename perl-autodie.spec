@@ -1,5 +1,5 @@
 %define upstream_name       autodie
-%define upstream_version 2.20
+%define upstream_version 2.22
 
 Summary:	Lexically have functions succeed or die
 Name:		perl-%{upstream_name}
@@ -50,5 +50,6 @@ void context--that is, when their return values are ignored. For example
 %doc Changes README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
 
