@@ -48,7 +48,7 @@ void context--that is, when their return values are ignored. For example
 %makeinstall_std
 
 %files
-%doc Changes README
+%doc Changes 
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
 
