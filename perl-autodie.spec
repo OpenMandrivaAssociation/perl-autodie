@@ -1,11 +1,11 @@
 %define upstream_name       autodie
-%define upstream_version 2.25
+%define upstream_version 2.26
 
 Summary:	Lexically have functions succeed or die
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
@@ -38,7 +38,7 @@ void context--that is, when their return values are ignored. For example
 %setup -qn %{upstream_name}-%{upstream_version} 
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -51,8 +51,3 @@ void context--that is, when their return values are ignored. For example
 %doc Changes 
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
-
-
-
-
