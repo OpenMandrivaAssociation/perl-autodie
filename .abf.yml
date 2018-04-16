@@ -1,7 +1,2 @@
-removed_sources:
-  autodie-2.13.tar.gz: effbdf439d5e5d78963839ddfe00e604ec41e1b5
-  autodie-2.20.tar.gz: 37b1e3dfe57cf0a5f755b1b7b016191420fa5242
-  autodie-2.22.tar.gz: 615d64bde524452e152e45942149d0e46a8bddc2
-  autodie-2.23.tar.gz: 8fc5ac0bcc44e5c6b6ce5cf30b5f80cc87a2bf49
 sources:
-  autodie-2.25.tar.gz: a2ec1cba47cb4f213bd07f1de9aad323bbe6fe5c
+  autodie-2.29.tar.gz: 64fb0ac063a3d2716beffa273b15d541ed5a58fd
